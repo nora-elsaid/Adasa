@@ -1,0 +1,63 @@
+.grid-overlay {
+  /* background: linear-gradient(rgba(12, 0, 0, 0.5) 1px, transparent 1px), */
+  /* linear-gradient(90deg, rgba(12, 0, 0, 0.5) 1px, transparent 1px); */
+  background-color: #000;
+  /* background-size: 60px 60px; */
+}
+
+.glow-orange {
+  width: 380px;
+  height: 380px;
+  background: rgba(255, 165, 0, 0.15);
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.glow-yellow {
+  width: 380px;
+  height: 380px;
+  background: rgba(157, 107, 70, 0.1);
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, orange, gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.start-25 {
+  left: 25%;
+}
+
+.end-25 {
+  right: 25%;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(16px);
+}
+
+.input-dark::placeholder {
+  color: #9ca3af;
+}
+
+.hover-filter:hover {
+  border-color: rgba(255, 165, 0, 0.4) !important;
+  background-color: #f66d14;
+  color: #fff !important;
+  transition: 0.3s ease;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+.btnprimary {
+  background-color: #f66d14;
+  color: #fff;
+  transition: 0.3s ease;
+}

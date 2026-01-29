@@ -1,0 +1,65 @@
+.hover-card {
+  transition: all 0.4s ease;
+}
+
+.hover-card:hover {
+  border-color: #f66d14 !important;
+}
+
+.hover-zoom {
+  transition: transform 0.6s ease;
+}
+
+.hover-card:hover .hover-zoom {
+  transform: scale(1.08);
+}
+
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.hover-card:hover .gradient-overlay {
+  opacity: 1;
+}
+
+.hover-title {
+  transition: color 0.3s ease;
+}
+
+.hover-card:hover .hover-title {
+  color: #f66d14;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+}
+
+.hover-read {
+  transition: 0.3s;
+}
+
+.hover-card:hover .hover-read {
+  letter-spacing: 0.5px;
+}
+.bgbrown {
+  background-color: #2e1e14;
+}
+.card img {
+  transition: transform 0.7s ease-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card > a > div:first-child > div:first-child {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover > a > div:first-child > div:first-child {
+  opacity: 1;
+}

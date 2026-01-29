@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.bgprimary {
+  background-color: #f66d14;
+}
+.txtprimary {
+  color: #f66d14;
+}
+
+.btnprimary {
+  background-color: #f66d14;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.btnprimary:hover {
+  transform: translateY(-1px);
+  background-color: #f66d14;
+  color: #fff;
+}
+.mt-80 {
+  margin-top: 80px;
+}

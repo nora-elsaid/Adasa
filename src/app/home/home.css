@@ -1,0 +1,55 @@
+/* .btnprimary {
+  background-color: #f66d14;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.btnprimary:hover {
+  transform: translateY(-2px);
+  background-color: #f66d14 !important;
+  color: #fff;
+} */
+
+.dot-wrapper {
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+
+.dot-circle {
+  width: 8px;
+  height: 8px;
+  background: #f66d14;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ping-circle {
+  width: 100%;
+  height: 100%;
+  background: #f66d14;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ping 1.5s infinite;
+  opacity: 0.6;
+}
+@keyframes ping {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* .hover-up:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+} */

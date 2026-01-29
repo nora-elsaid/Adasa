@@ -1,0 +1,155 @@
+<div class="bg-black">
+  <div class="container">
+    <section class="position-relative pt-5 mt-80 pb-5">
+      <!-- Background base -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark"></div>
+
+      <!-- Grid overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 grid-overlay"></div>
+
+      <!-- Glow effects -->
+      <div class="position-absolute top-0 start-0 w-100 h-100">
+        <div class="position-absolute top-0 start-25 glow-orange"></div>
+        <div class="position-absolute bottom-0 end-25 glow-yellow"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="container position-relative text-center">
+        <span
+          class="badge bg-secondary bg-opacity-25 text-light d-inline-flex align-items-center gap-2 mb-3 px-3 py-2 rounded-pill"
+        >
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+            ></path>
+          </svg>
+          مدونتنا
+        </span>
+
+        <h1 class="fw-bold display-5 text-white mb-3">
+          استكشف <span class="gradient-text">مقالاتنا</span>
+        </h1>
+
+        <p class="text-secondary fs-5 mx-auto" style="max-width: 650px">
+          اكتشف الدروس والرؤى وأفضل الممارسات للتطوير الحديث
+        </p>
+      </div>
+    </section>
+    <div
+      class="sticky-top z-3 bg-black border-bottom rounded-1 border-secondary"
+      style="top: 100px"
+    >
+      <div class="container py-3">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+        >
+          <!-- Search -->
+          <div class="position-relative w-100" style="max-width: 320px">
+            <input
+              type="text"
+              placeholder="ابحث في المقالات..."
+              class="form-control bg-dark text-light border-secondary rounded-pill ps-4 pe-5 py-2 input-dark"
+            />
+            <svg
+              class="position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+
+          <!-- Filters -->
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button
+              class="btn bgprimary rounded-pill px-4 py-2 text-sm fw-medium text-white hover-filter"
+              (click)="filterPosts('all')"
+            >
+              جميع المقالات
+            </button>
+
+            <button
+              class="btn btn-dark border border-secondary rounded-pill px-4 py-2 text-secondary hover-filter"
+              (click)="filterPosts('إضاءة')"
+            >
+              إضاءة
+            </button>
+
+            <button
+              class="btn btn-dark border border-secondary rounded-pill px-4 py-2 text-secondary hover-filter"
+              (click)="filterPosts('بورتريه')"
+            >
+              بورتريه
+            </button>
+
+            <button
+              class="btn btn-dark border border-secondary rounded-pill px-4 py-2 text-secondary hover-filter"
+              (click)="filterPosts('مناظر طبيعية')"
+            >
+              مناظر طبيعية
+            </button>
+
+            <button
+              class="btn btn-dark border border-secondary rounded-pill px-4 py-2 text-secondary hover-filter"
+              (click)="filterPosts('تقنيات')"
+            >
+              تقنيات
+            </button>
+
+            <button
+              class="btn btn-dark border border-secondary rounded-pill px-4 py-2 text-secondary hover-filter"
+              (click)="filterPosts('معدات')"
+            >
+              معدات
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center bg-black pt-4">
+      <p class="text-secondary mb-0">
+        عرض <span class="fw-bold text-white">{{ filteredPosts.length }}</span> مقالات
+      </p>
+
+      <div class="d-flex gap-2">
+        <div class="d-flex bg-dark border border-secondary rounded-4 py-2 px-4">
+          <!-- زر عرض شبكي -->
+          <button
+            class="btn btnprimary p-2 rounded me-1"
+            title="عرض شبكي"
+            (click)="setView('grid')"
+          >
+            <svg class="bi" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- زر عرض قائمة -->
+          <button
+            class="btn btn-outline-light p-2 rounded"
+            title="عرض قائمة"
+            (click)="setView('list')"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <app-posts [allposts]="filteredPosts" [view]="view"> </app-posts>
+  </div>
+</div>
